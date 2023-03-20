@@ -8,17 +8,29 @@ var generateBtn = document.querySelector("#generate");
 //var specialChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
 //var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var charsetAll = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+
 var charsetNoSpecial = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
 var charsetNoNumber = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+
 var charsetNoSpecialNoNumber = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 var charsetLowerOnly = "abcdefghijklmnopqrstuvwxyz"
+
 function writePassword() {
+  var results = ""
   var length = window.prompt ("How many characters does your password need to be? Enter a number between 8 and 128.")
-  if (length < 8 || length > 128) {
-    
+
+  var charCount = parseInt(length)
+
+  if (charCount < 8 || charCount > 128) {
+    return writePassword
   }
+
   var useUpper = window.confirm ("Does your password require upper case letters?")
+
   var useNumber = window.confirm ("Does your password require numbers?")
+
   var useSpecial = window.confirm ("Does your password require special characters?")
 
   if (useUpper && useNumber && useSpecial) {
