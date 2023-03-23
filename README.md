@@ -13,7 +13,7 @@ N/A
 
 Navigate to https://nreece6.github.io/password-generator/ to use this application.
 
-Once you have navigated to the site, press the "Generate Password" button and you will be prompted with questions pretaining to the desired character length of your password, whether or not you would like to use Upper Case letters, Numbers, and Special Characters in your password. You can refresh the page if you are not happy with the desired results to run the application again.
+Once you have navigated to the site, press the "Generate Password" button and you will be prompted with questions pretaining to the desired character length of your password, whether or not you would like to use Upper Case letters, Numbers, and Special Characters in your password. The program assumes Lowercase letters will be used. You can refresh the page if you are not happy with the desired results to run the application again.
 
 ## Credits
 
