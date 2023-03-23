@@ -20,6 +20,8 @@ var num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 function writePassword() {
   var results = ""
+
+  // asks user how many characters they would like in their passowrd. answer must be between 8-128 or they will be prompted again
   var length = window.prompt ("How many characters does your password need to be? Enter a number between 8 and 128.")
 
   var charCount = parseInt(length)
@@ -27,7 +29,7 @@ function writePassword() {
   if (charCount < 8 || charCount > 128) {
     return writePassword
   }
-
+// ask user what characters they would like to add to the library of possible responses.
   var useUpper = window.confirm ("Does your password require upper case letters?")
 
   var useNumber = window.confirm ("Does your password require numbers?")
@@ -61,7 +63,7 @@ function writePassword() {
   }
   console.log(combinedChar)
 
-
+// based on the character set library the user requested, generates a random password for the number of characters the user requested
   for (var i = 0; i < charCount; i++) {
     results += combinedChar[Math.floor(Math.random() * combinedChar.length)];
   }
